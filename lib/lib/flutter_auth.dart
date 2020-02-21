@@ -30,7 +30,7 @@ class FlutterOAuth extends OAuth {
 
       closeWebView();
       launch("${requestDetails.url}?$urlParams",
-          forceWebView: false, forceSafariVC: configuration.forceSafariVC, enableJavaScript: configuration.enableJavaScript);
+          forceWebView: false, forceSafariVC: false, enableJavaScript: configuration.enableJavaScript);
       // launch("${requestDetails.url}?$urlParams");
 
       code = await onCode.first;
