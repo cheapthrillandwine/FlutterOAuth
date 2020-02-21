@@ -30,7 +30,7 @@ class FlutterOAuth extends OAuth {
 
       closeWebView();
       launch("${requestDetails.url}?$urlParams",
-          forceWebView: configuration.forceWebiew, forceSafariVC: configuration.forceSafariVC, enableJavaScript: configuration.enableJavaScript);
+          forceWebView: false, forceSafariVC: configuration.forceSafariVC, enableJavaScript: configuration.enableJavaScript);
 
       code = await onCode.first;
       close();
@@ -62,7 +62,7 @@ class FlutterOAuth extends OAuth {
       final code = uri.queryParameters["code"];
       final error = uri.queryParameters["error"];
 
-      if( (configuration.redirectedHtml != null) && (configuration.forceWebiew != true) ) {
+      if( (configuration.redirectedHtml != null) && (configuration.forceWebView != true) ) {
         request.response.write(configuration.redirectedHtml);
       }
 

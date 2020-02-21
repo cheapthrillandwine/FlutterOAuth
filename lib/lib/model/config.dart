@@ -7,7 +7,7 @@ class Config {
   final String responseType;
   final String contentType;
   final String redirectedHtml;
-  final bool forceWebiew;
+  final bool forceWebView;
   final bool forceSafariVC;
   final bool enableJavaScript;
   final Map<String, String> parameters;
@@ -15,5 +15,5 @@ class Config {
 
   Config(this.authorizationUrl, this.tokenUrl, this.clientId,
       this.clientSecret, this.redirectUri, this.responseType,
-      {this.contentType = "application/json", this.parameters, this.headers, this.redirectedHtml, this.forceWebiew, this.forceSafariVC, this.enableJavaScript});
+      {this.contentType = "application/json", this.parameters, this.headers, this.redirectedHtml, this.forceWebView, this.forceSafariVC, this.enableJavaScript});
 }
